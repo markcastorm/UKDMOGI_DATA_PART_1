@@ -1,0 +1,60 @@
+# UKDMOGI Data Scraper - Python Dependencies
+# UK Debt Management Office - Gilt Issuance Data Pipeline
+#
+# Installation: pip install -r requirements.txt
+
+# =============================================================================
+# WEB SCRAPING
+# =============================================================================
+
+# Selenium for browser automation
+selenium==4.27.1
+
+# =============================================================================
+# DATA PROCESSING
+# =============================================================================
+
+# Pandas for data manipulation and Excel handling
+pandas==2.2.3
+
+# Excel file reading (.xls format)
+xlrd==2.0.1
+
+# Excel file writing (.xlsx format)
+openpyxl==3.1.5
+
+# =============================================================================
+# UTILITIES
+# =============================================================================
+
+# Date/time handling (built-in, but listed for reference)
+# datetime
+
+# File operations (built-in)
+# pathlib
+# os
+# shutil
+# glob
+
+# CSV handling (built-in)
+# csv
+
+# Logging (built-in)
+# logging
+
+# =============================================================================
+# NOTES
+# =============================================================================
+#
+# Python version: 3.8+
+#
+# Additional system requirements:
+# - Chrome or Chromium browser
+# - ChromeDriver (must match Chrome version)
+#   Download from: https://chromedriver.chromium.org/
+#   Or install via:
+#     Windows: choco install chromedriver
+#     Mac: brew install chromedriver
+#     Linux: apt-get install chromium-chromedriver
+#
+# =============================================================================

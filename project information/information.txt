@@ -1,0 +1,473 @@
+i believe its a new dawn new begining its a new run book  howp you have gon through the previous code see how good it its and its architecture 
+(C:\Users\Mark Castro\Documents\CHEF_NOVARTIS)  analyze the scripts weel we go na use the architecture 
+
+now weare getting started on a new runnbook(D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\UKDMOGI_Runbook - RUNBOOK.csv)()
+HERE IS THE MANUALY SCRAPED DATA FROM 2024-2022 REPORT (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\UKDMOGI_DATA_PART_1_20251023 - DATA_PART_1.csv) and 
+Meta (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\UKDMOGI_META_PART_1_20250707 - META_PART_1.csv)
+
+analyze them first before we started so our code will be similar to the other one
+thistime we will  have the config.py  add the necessary collumns mapinng since the sub headers and headers in the manual data will be exactly the way they are to every output and in the exact arrangemen 
+(D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\UKDMOGI_DATA_PART_1_20251023 - DATA_PART_1.csv)
+
+seconndly lets move on to the to the scraper.py arcording to the runbook we are supposed to visit this urls and in a specific order(Need to save data from each link below:	
+
+1. Go to link:
+https://www.dmo.gov.uk/data/pdfdatareport?reportCode=D5D
+
+
+ once the site loads it will look like thiths (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\image1.png) as you can see thers is a cookie banar overlay on the site on the left side 
+ this will give you a clear picture (<div id="ccc" role="region" aria-label="Cookie Preferences" aria-live="polite" style="z-index: 2147483647;"><div id="ccc-overlay"></div><div id="ccc-module" class="ccc-module--slideout ccc-module--left" role="dialog"><div id="ccc-content" class="ccc-content--light  "><button id="ccc-close" class="ccc-link ccc-tabbable " tabindex="0" aria-label="Close Cookie Control"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><title>Cookie Control Close Icon</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button><div id="cc-panel" class="ccc-panel "><h2 id="ccc-title">We use necessary cookies to make our site work. We would also like to set optional analytics cookies to help us improve it. We won't set optional cookies unless you enable them. Using this tool will set a cookie on your device to remember your preferences. 
+ For more detailed information about the cookies we use, see our  <a href="/terms-of-use/cookie-policy/">Cookie Policy</a>. </h2><p class="ccc-intro">Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.</p><div id="ccc-button-holder"><button id="ccc-recommended-settings" class="ccc-notify-button ccc-button-solid ccc-tabbable ccc-accept-button"><span>Accept Recommended Settings</span></button><button id="ccc-reject-settings" class="ccc-notify-button ccc-link ccc-tabbable ccc-reject-button"><span>I Do Not Accept</span></button></div><hr aria-hidden="true"><h3 id="ccc-necessary-title">Necessary Cookies</h3><p id="ccc-necessary-description">Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.</p><hr aria-hidden="true"><div id="ccc-optional-categories"><div class="optional-cookie" aria-live="polite"><h3 class="optional-cookie-header">Analytics</h3><p>We'd like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. For more information on how these cookies work please see our <a href="/terms-of-use/cookie-policy/">Cookie Policy</a>. The cookies collect information in an anonymous form.</p><div class="checkbox-toggle checkbox-toggle--slider checkbox-toggle--light ccc-tabbable"><label class="checkbox-toggle-label"><input class="checkbox-toggle-input" type="checkbox"><span class="checkbox-toggle-text ccc-sr-only">Analytics</span><span class="checkbox-toggle-on" aria-hidden="true">On</span><span class="checkbox-toggle-off" aria-hidden="true">Off</span><span class="checkbox-toggle-toggle"></span></label></div><hr aria-hidden="true"></div></div><div id="ccc-info" class="ccc-info"><a id="ccc-info-link" class="ccc-link ccc-tabbable" href="https://www.civicuk.com/cookie-control" target="_blank" rel="noopener">About this tool<span class="ccc-svg-element"><span class="ccc-sr-only ">(Opens in a new window)</span><svg xmlns="http://www.w3.org/2000/svg" data-icon="external-link" viewBox="0 0 32 40" x="0px" y="0px"><title>Cookie Control Link Icon</title><path d="M32 0l-8 1 2.438 2.438-9.5 9.5-1.063 1.063 2.125 2.125 1.063-1.063 9.5-9.5 2.438 2.438 1-8zm-30 3c-.483 0-1.047.172-1.438.563-.391.391-.563.954-.563 1.438v25c0 .483.172 1.047.563 1.438.391.391.954.563 1.438.563h25c.483 0 1.047-.172 1.438-.563.391-.391.563-.954.563-1.438v-15h-3v14h-23v-23h15v-3h-16z"></path></svg></span></a></div></div></div></div><button id="ccc-icon" class="ccc-icon--left ccc-icon--light " aria-label="Set cookie preferences" accesskey="c" width="80" height="80" style="width: 80px; height: 80px;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72.5 72.5" enable-background="new 0 0 72.5 72.5"><title>Cookie Control Icon</title><g id="triangle"><path d="M0,0l72.5,72.5H0V0z"></path></g><g id="star"><path d="M33.2,51.9l-3.9-2.6l1.6-4.4l-4.7,0.2L25,40.6l-3.7,2.9l-3.7-2.9l-1.2,4.5l-4.7-0.2l1.6,4.4l-3.9,2.6l3.9,2.6l-1.6,4.4l4.7-0.2l1.2,4.5l3.7-2.9l3.7,2.9l1.2-4.5l4.7,0.2l-1.6-4.4L33.2,51.9z M24.6,55.3c-0.3,0.4-0.8,0.8-1.3,1s-1.1,0.3-1.9,0.3c-0.9,0-1.7-0.1-2.3-0.4s-1.1-0.7-1.5-1.4c-0.4-0.7-0.6-1.6-0.6-2.6c0-1.4,0.4-2.5,1.1-3.3c0.8-0.8,1.8-1.1,3.2-1.1c1.1,0,1.9,0.2,2.6,0.7s1.1,1.1,1.4,2L23,50.9c-0.1-0.3-0.2-0.5-0.3-0.6c-0.1-0.2-0.3-0.4-0.5-0.5s-0.5-0.2-0.7-0.2c-0.6,0-1.1,0.2-1.4,0.7c-0.2,0.4-0.4,0.9-0.4,1.7c0,1,0.1,1.6,0.4,2c0.3,0.4,0.7,0.5,1.2,0.5c0.5,0,0.9-0.1,1.2-0.4s0.4-0.7,0.6-1.2l2.3,0.7C25.2,54.3,25,54.8,24.6,55.3z"></path></g></svg></button></div>)
+ we are supposed to click accept recommended setings button (<div id="ccc-button-holder"><button id="ccc-recommended-settings" class="ccc-notify-button ccc-button-solid ccc-tabbable ccc-accept-button"><span>Accept Recommended Settings</span></button><button id="ccc-reject-settings" class="ccc-notify-button ccc-link ccc-tabbable ccc-reject-button"><span>I Do Not Accept</span></button></div>)
+ here is the sample of the html site (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\sample.txt)ater it loads 
+
+we are now interested inwith this (<div class="container two-column-page">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/data/">Data</a></li>
+                        <li class="breadcrumbNoLink">Outright Gilt Issuance Calendar</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+                <h1>
+                    Outright Gilt Issuance Calendar
+                </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            
+    <nav id="nav-left">
+        <ul class="nav nav-pills nav-stacked">
+                <li class="collapse-heading  ">
+                    <a href="/data/gilt-market/">Gilt Market</a>
+                        <a role="button" href="#17087" class="data-toggle collapsed" aria-label="Toggle Gilt Market" data-toggle="collapse" data-target="#17087" aria-expanded="false">
+                            <span role="presentation" class="icon icon-plus">
+                                <span class="to-read">Toggle Gilt Market button collapsed</span>
+                            </span>
+                            <span role="presentation" class="icon icon-minus">
+                                <span class="to-read">Toggle Gilt Market button expanded</span>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="17087" aria-expanded="false">
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/results-of-gilt-operations/">Results of Gilt Operations</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/historical-prices-and-yields/">Historical Prices and Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/gilts-in-issue/">Gilts in Issue</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/index-linked-gilts/">Index-linked Gilts</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/government-holdings/">Government Holdings</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/turnover-data/">Turnover Data</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/gross-and-net-issuance-data/">Gross and Net Issuance Data</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/aggregated-yields/">Aggregated Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/average-gilt-issuance-yields/">Average Gilt Issuance Yields</a>
+                                
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="collapse-heading  ">
+                    <a href="/data/treasury-bills/">Treasury Bills</a>
+                        <a role="button" href="#17120" class="data-toggle collapsed" aria-label="Toggle Treasury Bills" data-toggle="collapse" data-target="#17120" aria-expanded="false">
+                            <span role="presentation" class="icon icon-plus">
+                                <span class="to-read">Toggle Treasury Bills button collapsed</span>
+                            </span>
+                            <span role="presentation" class="icon icon-minus">
+                                <span class="to-read">Toggle Treasury Bills button expanded</span>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="17120" aria-expanded="false">
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/tender-results/">Tender Results</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/prices-and-yields/">Prices and Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/treasury-bill-issuance-and-stock/">Treasury Bill Issuance and Stock</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/treasury-bills-outstanding/">Treasury Bills Outstanding</a>
+                                
+
+                            </li>
+                        </ul>
+                </li>
+        </ul>
+    </nav>
+
+        </div>
+
+        <div class="col-xs-12 col-md-9">
+            
+
+
+    <!--script src="~/Umbraco/lib/jquery-ui/jquery-ui.min.js"></script -->
+    <script defer="" src="/dist/scripts/reports/DataReport.js"></script>
+    <script defer="" src="/dist/scripts/reports/PDFData.js"></script>
+    <script defer="" src="/dist/scripts/reports/PDFDataReport.js"></script>
+    <script>
+        var pdfreportdata = {
+  "ReportCode": "D5D",
+  "ReportInformation": {
+    "code": "D5D",
+    "reportSourceId": 2,
+    "reportTypeId": 2,
+    "landscape": false,
+    "zoomFactor": 100,
+    "exportTypes": [
+      {
+        "Id": 1,
+        "Name": "Excel",
+        "ExtensionName": "xls"
+      },
+      {
+        "Id": 2,
+        "Name": "Word",
+        "ExtensionName": "doc"
+      }
+    ],
+    "name": "Outright Gilt Issuance Calendar",
+    "description": "This report provides details on the gilt issuances (and other outright issuance) for both the current financial year and previous years.  The issuance calendar for each financial year is published just ahead of the start of the financial year in question.  Each quarter the calendar is refined to name the specific gilts to be auctioned in that quarter, and in the week before an auction, further refined to include the size of that auction.  For new bonds, the coupon rate is announced at the same time as the size of the auction.  On the day of an auction the cash proceeds are added to the calendar.",
+    "extendedDescription": null,
+    "footnote1": "Syndications and gilt tenders are added to this calendar when their precise date is announced. ",
+    "footnote2": "In 2009-10, starting with the auction on 1 June 2009, the DMO has offered an option to successful bidders at auctions to purchase additional stock which will be available to successful bidders at the average accepted (or strike) price at the auction.",
+    "footnote3": "Amounts issued include the exercise of the Post Auction Option. ",
+    "footnote4": null,
+    "footnote5": null,
+    "footnote6": null
+  },
+  "ReportParameters": [
+    {
+      "reportCode": null,
+      "internalName": "Financial Year",
+      "prompt": "Financial Year",
+      "parameterTypeId": 3,
+      "defaultValue1": null,
+      "defaultValue2": null,
+      "listItems": [
+        {
+          "key": "2025-26",
+          "value": "2025-26"
+        },
+        {
+          "key": "2024-25",
+          "value": "2024-25"
+        },
+        {
+          "key": "2023-24",
+          "value": "2023-24"
+        },
+        {
+          "key": "2022-23",
+          "value": "2022-23"
+        },
+        {
+          "key": "2021-22",
+          "value": "2021-22"
+        },
+        {
+          "key": "2020-21",
+          "value": "2020-21"
+        },
+        {
+          "key": "2019-20",
+          "value": "2019-20"
+        },
+        {
+          "key": "2018-19",
+          "value": "2018-19"
+        },
+        {
+          "key": "2017-18",
+          "value": "2017-18"
+        },
+        {
+          "key": "2016-17",
+          "value": "2016-17"
+        },
+        {
+          "key": "2015-16",
+          "value": "2015-16"
+        },
+        {
+          "key": "2014-15",
+          "value": "2014-15"
+        },
+        {
+          "key": "2013-14",
+          "value": "2013-14"
+        },
+        {
+          "key": "2012-13",
+          "value": "2012-13"
+        },
+        {
+          "key": "2011-12",
+          "value": "2011-12"
+        },
+        {
+          "key": "2010-11",
+          "value": "2010-11"
+        },
+        {
+          "key": "2009-10",
+          "value": "2009-10"
+        },
+        {
+          "key": "2008-09",
+          "value": "2008-09"
+        },
+        {
+          "key": "2007-08",
+          "value": "2007-08"
+        },
+        {
+          "key": "2006-07",
+          "value": "2006-07"
+        },
+        {
+          "key": "2005-06",
+          "value": "2005-06"
+        },
+        {
+          "key": "2004-05",
+          "value": "2004-05"
+        },
+        {
+          "key": "2003-04",
+          "value": "2003-04"
+        },
+        {
+          "key": "2002-03",
+          "value": "2002-03"
+        },
+        {
+          "key": "2001-02",
+          "value": "2001-02"
+        },
+        {
+          "key": "2000-01",
+          "value": "2000-01"
+        },
+        {
+          "key": "1999-00",
+          "value": "1999-00"
+        },
+        {
+          "key": "1998-99",
+          "value": "1998-99"
+        }
+      ],
+      "valuesLimit": null,
+      "dataTypeId": 5,
+      "ParameterNumber": 0,
+      "DefaultDate": "0001-01-01T00:00:00",
+      "DefaultDate2": "0001-01-01T00:00:00",
+      "MinDate": null,
+      "MaxDate": null
+    }
+  ],
+  "FooterList": [
+    "Syndications and gilt tenders are added to this calendar when their precise date is announced. ",
+    "In 2009-10, starting with the auction on 1 June 2009, the DMO has offered an option to successful bidders at auctions to purchase additional stock which will be available to successful bidders at the average accepted (or strike) price at the auction.",
+    "Amounts issued include the exercise of the Post Auction Option. "
+  ],
+  "ErrorMessage": null,
+  "Result": null,
+  "Name": null,
+  "Filename": null,
+  "ContentType": null,
+  "ResultMessage": null
+};
+    </script>
+            <div class="notice-block show" id="notice_box">
+                <div tabindex="0" role="button" class="notice-toggle pull-right" data-toggle="notice-block" data-target="#notice_box" aria-label="Report overview" aria-expanded="true">
+                    <span role="presentation" class="icon-plus"></span>
+                    <span role="presentation" class="icon-minus"></span>
+                </div>
+                <div class="notice-block-title">
+                    <h2>Report Overview</h2>
+                </div>
+                <div class="notice-block-body">
+                    This report provides details on the gilt issuances (and other outright issuance) for both the current financial year and previous years.  The issuance calendar for each financial year is published just ahead of the start of the financial year in question.  Each quarter the calendar is refined to name the specific gilts to be auctioned in that quarter, and in the week before an auction, further refined to include the size of that auction.  For new bonds, the coupon rate is announced at the same time as the size of the auction.  On the day of an auction the cash proceeds are added to the calendar.
+                </div>
+            </div>
+<div>
+        <form id="pdfDataReport" name="pdfDataReport">
+
+
+    <div class="row form-group no-border">
+        <label id="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" for="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]">
+            Financial Year:<span class="required">*</span>
+            <span class="form-control-wrapper ml-10">
+                <select aria-labelledby="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" class="form-control" id="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" name="Financial Year"><option value="2025-26">2025-26</option>
+<option value="2024-25">2024-25</option>
+<option value="2023-24">2023-24</option>
+<option value="2022-23">2022-23</option>
+<option value="2021-22">2021-22</option>
+<option value="2020-21">2020-21</option>
+<option value="2019-20">2019-20</option>
+<option value="2018-19">2018-19</option>
+<option value="2017-18">2017-18</option>
+<option value="2016-17">2016-17</option>
+<option value="2015-16">2015-16</option>
+<option value="2014-15">2014-15</option>
+<option value="2013-14">2013-14</option>
+<option value="2012-13">2012-13</option>
+<option value="2011-12">2011-12</option>
+<option value="2010-11">2010-11</option>
+<option value="2009-10">2009-10</option>
+<option value="2008-09">2008-09</option>
+<option value="2007-08">2007-08</option>
+<option value="2006-07">2006-07</option>
+<option value="2005-06">2005-06</option>
+<option value="2004-05">2004-05</option>
+<option value="2003-04">2003-04</option>
+<option value="2002-03">2002-03</option>
+<option value="2001-02">2001-02</option>
+<option value="2000-01">2000-01</option>
+<option value="1999-00">1999-00</option>
+<option value="1998-99">1998-99</option>
+</select>
+            </span>
+        </label>
+    </div>
+                    <div class="parameterErrors" id="paramError1"></div>
+        </form>
+    <script defer="" src="/dist/scripts/reports/ClearErrors.js"></script>
+    <div id="error" class="alert alert-danger" style="display: none;"></div>
+    <br>
+
+    <input type="hidden" id="exportFormatName" value="exportFormat">
+
+    <div class="button-block">
+		<div id="export-label"><b>Export options</b></div>
+        <div id="dvLoading" style="display: none;">
+            <img src="/dist/images/loading.gif" width="15" alt="Loading...">
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateParameterPDFDataReport()">PDF</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('xls')">Excel</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('doc')">Word</button>
+    </div>
+    <br>
+
+</div>
+        <!--script src="~/Assets/scripts/datepicker.js"></script -->
+
+        </div>
+    </div>
+</div>)
+on the report over view section  we look for the input section (<form id="pdfDataReport" name="pdfDataReport">
+
+
+    <div class="row form-group no-border">
+        <label id="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" for="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]">
+            Financial Year:<span class="required">*</span>
+            <span class="form-control-wrapper ml-10">
+                <select aria-labelledby="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" class="form-control" id="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" name="Financial Year"><option value="2025-26">2025-26</option>
+<option value="2024-25">2024-25</option>
+<option value="2023-24">2023-24</option>
+<option value="2022-23">2022-23</option>
+<option value="2021-22">2021-22</option>
+<option value="2020-21">2020-21</option>
+<option value="2019-20">2019-20</option>
+<option value="2018-19">2018-19</option>
+<option value="2017-18">2017-18</option>
+<option value="2016-17">2016-17</option>
+<option value="2015-16">2015-16</option>
+<option value="2014-15">2014-15</option>
+<option value="2013-14">2013-14</option>
+<option value="2012-13">2012-13</option>
+<option value="2011-12">2011-12</option>
+<option value="2010-11">2010-11</option>
+<option value="2009-10">2009-10</option>
+<option value="2008-09">2008-09</option>
+<option value="2007-08">2007-08</option>
+<option value="2006-07">2006-07</option>
+<option value="2005-06">2005-06</option>
+<option value="2004-05">2004-05</option>
+<option value="2003-04">2003-04</option>
+<option value="2002-03">2002-03</option>
+<option value="2001-02">2001-02</option>
+<option value="2000-01">2000-01</option>
+<option value="1999-00">1999-00</option>
+<option value="1998-99">1998-99</option>
+</select>
+            </span>
+        </label>
+    </div>
+                    <div class="parameterErrors" id="paramError1"></div>
+        </form>)   ensure you always select the latest data and also we need te option in the config to choose which data for scraping but default should aways choose the latest date from the list 
+aftere ensuring the  the designated date is selected lets move to the next step 
+(<div class="button-block">
+		<div id="export-label"><b>Export options</b></div>
+        <div id="dvLoading" style="display: none;">
+            <img src="/dist/images/loading.gif" width="15" alt="Loading...">
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateParameterPDFDataReport()">PDF</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('xls')">Excel</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('doc')">Word</button>
+    </div>)
+ we click the excel button to trigger  the downloads of the file to save on the created download folder with timestampds sub folders  test the orchestrator with the scrapper.py 
+ when we downlood we will get a file like this (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\20260113 - Outright Gilt Issuance Calendar.xls)
+ here is a screen shot (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\image2.png)  based on the runbook instructions we are supposed to get (Cash Raised        (£ million)
+)  like you cansee in the old manualy scrapped data (D:\Projects\SIMBA-RUNBOOKS\UKDMOGI_DATA_PART_1\project information\UKDMOGI_DATA_PART_1_20251023 - DATA_PART_1.csv)
+and the (Operation Date) is important they be  in the required formart just analyze the data you can see what am talking about that will be the job of the parser.py  then the filegenerator will generate the meta file and data file in the output folder with timestanped subfolder for every run  and a latest subfolder too which holds the latest file for every run 
+we test the full pipeling now for part 1 
+
+
+
+
+
+
+
+
+
+

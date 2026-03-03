@@ -1,0 +1,79 @@
+"The dataset consists of two parts, each part has a separate source.",
+,
+Part_1,1. Go to link:
+,https://www.dmo.gov.uk/data/pdfdatareport?reportCode=D5D
+,2. Select the latest date (1) and save the Excel file (2):
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,"3. In the file we need only ""Cash Raised"". We need data from the current year."
+,
+Part_2,1. Go to link:
+,https://www.dmo.gov.uk/data/ExportReport?reportCode=D1C
+,
+,2. Save the Excel file:
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,"3. We need all data from ""Nominal amount outstanding at redemption (£ million)"" column from the current year."
+,"Importantly, values should be negative for this series (just multiply each nominal amount by -1)."
+,
+Note,"Frequently, it may be the case that there are multiple values for the same day, in which case we should add those values together.Example in the ""example_sum"" sheet."
+,The data should be checked daily for updates. NEXT_RELEASE_DATE - next business day.
+,"Example - in the ""DATA""sheet."
+,
+,"If the data is published on a weekend, then this data must be saved as data for Monday. If the data is published both on a weekend and on Monday, they must be summed up."
+,
+,For example:
+,if the raw data had
+,7/22/23: 10
+,7/24/23: 40
+,
+,I would like it to be represented as:
+,7/24/23: 50
+,
+,Save each part of the dataset to separate DATA/META file:
+,
+,"Outright Gilt Issuance Calendar data (part_1) - save in files with ""PART_1"" in the file name:"
+,For example:
+,UKDMOGI_DATA_PART_1_20220926.xls
+,UKDMOGI_META_PART_1_20220926.xls
+,
+,"Redemption Details of Redeemed Gilts data (part 2) - save in the files with ""PART_2"" in the file name:"
+,UKDMOGI_DATA_PART_2_20220926.xls
+,UKDMOGI_META_PART_2_20220926.xls

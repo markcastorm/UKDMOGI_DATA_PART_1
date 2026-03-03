@@ -1,0 +1,729 @@
+<html lang="en" class=" svg svgfilters video csscalc cssgradients rgba inlinesvg supports svgclippaths svgforeignobject smil svgasimg no-touchevents cssanimations backgroundcliptext borderimage borderradius boxshadow boxsizing csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox flexboxlegacy flexwrap csstransforms csstransforms3d preserve3d csstransitions datauri"><head>
+    <meta charset="UTF-8">
+    <title>Outright Gilt Issuance Calendar</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/dist/favicons/dmo/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/dist/favicons/dmo/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/dist/favicons/dmo/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/dist/favicons/dmo/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/dist/favicons/dmo/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/dist/favicons/dmo/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/dist/favicons/dmo/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/dist/favicons/dmo/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" sizes="196x196" href="/dist/favicons/dmo/favicon-196x196.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/dist/favicons/dmo/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/dist/favicons/dmo/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/dist/favicons/dmo/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="128x128" href="/dist/favicons/dmo/favicon-128.png">
+<meta name="application-name" content="UK Debt Management Office">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="/dist/favicons/dmo/mstile-144x144.png">
+<meta name="msapplication-square70x70logo" content="/dist/favicons/dmo/mstile-70x70.png">
+<meta name="msapplication-square150x150logo" content="/dist/favicons/dmo/mstile-150x150.png">
+<meta name="msapplication-wide310x150logo" content="/dist/favicons/dmo/mstile-310x150.png">
+<meta name="msapplication-square310x310logo" content="/dist/favicons/dmo/mstile-310x310.png">
+
+
+    <link rel="stylesheet" href="/dist/css/styles.css?v=ws-rBL280_BcNWceJxDRmTtjuBLIt1Z2YjJ4aPOKVUA">
+    
+        <script async="" src="https://cdn.perfdrive.com/aperture/aperture.js"></script><script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.2.min.js"></script>
+        <script>
+            var cookiePolicyUrl = '/terms-of-use/cookie-policy/';
+            var description =
+                'We\'d like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it.' +
+                ' For more information on how these cookies work please see our <a href="' + cookiePolicyUrl + '">Cookie Policy</a>.' +
+                ' The cookies collect information in an anonymous form.';
+            var title =
+                'We use necessary cookies to make our site work. We would also like to set optional analytics cookies to help us improve it. We won\'t set optional cookies unless you enable them. Using this tool will set a cookie on your device to remember your preferences. \n For more detailed information about the cookies we use, see our' +
+                '  <a href=' + cookiePolicyUrl + '>Cookie Policy</a>. ';
+
+            var necessaryDescription =
+                'Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.';
+
+            var necessaryTitle = 'Necessary Cookies';
+
+            var config = {
+                apiKey: 'eb8dac0172db5d2bade2e5ca8772c0bbb700ee41',
+                product: 'PRO',
+                setInnerHTML: true, //required to embed the Cookie Policy link in the description, cookieControl-9.x
+                consentCookieExpiry: 182,
+                rejectButton: true,
+                layout: 'slideout',
+                acceptBehaviour: 'recommended',
+                position: 'left',
+                theme: 'light',
+                optionalCookies: [
+                    {
+                        name: 'analytics',
+                        label: 'Analytics',
+                        description: description,
+                        recommendedState: 'on',
+                        lawfulBasis: 'consent',
+                        cookies: ['_ga', '_gid', '_gat', '_utma', '_utmb', '_utmc', '_utmz'],
+                        onAccept: function () {
+                            // Add Google Analytics
+                            (function (i, s, o, g, r, a, m) {
+                                i['GoogleAnalyticsObject'] = r;
+                                i[r] = i[r] ||
+                                    function () {
+                                        (i[r].q = i[r].q || []).push(arguments)
+                                    }, i[r].l = 1 * new Date();
+                                a = s.createElement(o),
+                                    m = s.getElementsByTagName(o)[0];
+                                a.async = 1;
+                                a.src = g;
+                                m.parentNode.insertBefore(a, m)
+                            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                            ga('create', 'UA-99765773-2', 'auto');
+                            ga('send', 'pageview');
+                            // End Google Analytics
+                        },
+                        onRevoke: function () {
+                            // Disable Google Analytics
+                            window['ga-disable-UA-99765773-2'] = true;
+                        }
+                    }
+                ],
+                text: {
+                    title: title,
+                    necessaryTitle: necessaryTitle,
+                    necessaryDescription: necessaryDescription
+                }
+            };
+            CookieControl.load(config);
+
+        </script>
+    
+
+<script>var __uzdbm_1 = "45a1e929-2764-4d08-aa20-e1279541d1b3";var __uzdbm_2 = "OGMwMzFhY2MtYmhiei00MDQ0LTk1YTgtODQxYmEzNGFkZDRmJDE5Ny4yMzcuMTc1LjI4";var __uzdbm_3 = "7f900045a1e929-2764-4d08-aa20-e1279541d1b31-17682888022380-0027a10602168a82dee10";var __uzdbm_4 = "false";var __uzdbm_5 = "uzmx";var __uzdbm_6 = "7f9000bf3f135c-6b7a-4ec1-b233-16f16e9f951e1-17682888022380-8d410ba99169c42510";var __uzdbm_7 = "dmo.gov.uk";</script> <script>   (function(w, d, e, u, c, g, a, b){     w["SSJSConnectorObj"] = w["SSJSConnectorObj"] || {ss_cid : c, domain_info: "auto"};     w[g] = function(i, j){w["SSJSConnectorObj"][i] = j};     a = d.createElement(e);     a.async = true;     a.src = u;     b = d.getElementsByTagName(e)[0];     b.parentNode.insertBefore(a, b);      })(window,document,"script","https://cdn.perfdrive.com/aperture/aperture.js","bhc1","ssConf");     ssConf("c1" , "https://dmo.gov.uk");   ssConf("c2",true);    ssConf("c3", "jsdatabotmanager"); </script><style>#ccc{position:fixed;z-index:2147483647;font-family:Arial,sans-serif;font-size:12px;line-height:1.4em}@media (min-width:1024px){#ccc{font-size:16px}}#ccc-icon{position:fixed;bottom:0;width:80px;height:80px;cursor:pointer;z-index:20;padding:0;border:0;background:transparent}#ccc-icon.ccc-icon--left{left:0}#ccc-icon.ccc-icon--right{right:0}#ccc-icon.ccc-icon--dark{fill:#000025}#ccc-icon.ccc-icon--dark #star path{fill:#fff}#ccc-icon.ccc-icon--light{fill:#555}#ccc-icon.ccc-icon--light #star path{fill:#f4f4f4}#ccc-overlay{position:fixed;top:0;bottom:0;left:0;right:0;z-index:1;background:rgba(0,0,0,.4);opacity:1;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-perspective:0;perspective:0;will-change:opacity;-webkit-animation-name:fade-in;animation-name:fade-in;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc-module{position:fixed;width:100%;height:100%;z-index:2}#ccc-module.ccc-module--slideout{top:0;bottom:0;width:90%;max-width:520px}#ccc-module.ccc-module--slideout.ccc-module--left{left:0;-webkit-animation-name:slide-right;animation-name:slide-right;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc-module.ccc-module--slideout.ccc-module--right{right:0;-webkit-animation-name:slide-left;animation-name:slide-left;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc-content{position:absolute;width:100%;height:100%;overflow-y:auto;padding:24px;box-sizing:border-box}.ccc-content--dark{color:#fff;fill:#fff;background-color:#313147}.ccc-content--light{color:#333;fill:#333;background-color:#f4f4f4}#ccc-close{position:absolute;right:16px;top:16px;cursor:pointer;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;border:0;background-color:transparent;padding:0!important;z-index:10}#ccc-title,.ccc-title{font-size:1.2em;line-height:1.5em;font-weight:700;padding-right:32px;margin:0;text-align:left}#ccc #ccc-recommended-settings{margin-left:0;float:none;clear:both}#ccc h3{margin:0;font-weight:700;padding-right:120px}#ccc h3,#ccc p,.ccc-intro{font-size:1em;line-height:1.5em;text-align:left}#ccc p,.ccc-intro{font-weight:400;margin:1em 0}#ccc hr{height:1px;border:0;margin:24px 0;opacity:.25}#ccc .ccc-svg-element{width:16px;height:16px;display:inline-block;position:relative;top:6px;margin-left:8px}#ccc .ccc-content--dark hr{background-color:#fff}#ccc .ccc-content--dark a,#ccc .ccc-content--dark h2,#ccc .ccc-content--dark h3,#ccc .ccc-content--dark p,#ccc .ccc-content--dark span{color:#fff;fill:#fff}#ccc .ccc-content--light hr{background-color:#333}#ccc .ccc-content--light a,#ccc .ccc-content--light h2,#ccc .ccc-content--light h3,#ccc .ccc-content--light p,#ccc .ccc-content--light span{color:#333;fill:#333}#ccc .optional-cookie{position:relative}.checkbox-toggle{position:absolute;top:-3px;right:0;margin:0}#ccc .checkbox-toggle-input{margin:0;padding:0;display:block;position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;z-index:1;opacity:0}#ccc .checkbox-toggle--checkbox{border:2px solid #fff;border-radius:4px}#ccc .checkbox-toggle--checkbox .checkbox-toggle-label{display:block;width:24px;height:24px}#ccc .checkbox-toggle--checkbox .checkbox-toggle-off,#ccc .checkbox-toggle--checkbox .checkbox-toggle-on{display:none}#ccc .checkbox-toggle--checkbox .checkbox-toggle-toggle{position:relative;display:block;width:100%;height:100%;border-radius:4px}#ccc .checkbox-toggle--checkbox input:checked~.checkbox-toggle-toggle:after{content:"";position:absolute;left:9px;top:5px;width:5px;height:10px;border:solid #fff;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);transform:rotate(45deg)}#ccc .checkbox-toggle--slider{border-radius:50px;border:4px solid #fff}#ccc .checkbox-toggle--slider .checkbox-toggle-label{display:-webkit-box;display:flex;margin:0;cursor:pointer;z-index:1}#ccc .checkbox-toggle--slider .checkbox-toggle-off,#ccc .checkbox-toggle--slider .checkbox-toggle-on{-webkit-box-flex:1;flex:1;flex-basis:50%;width:50%;min-width:40px;text-align:center;z-index:2;font-size:.75em;font-weight:700;padding:0 6px;white-space:nowrap}#ccc .checkbox-toggle--slider .checkbox-toggle-off{opacity:.65}#ccc .checkbox-toggle--slider .checkbox-toggle-toggle{display:block;width:50%;height:100%;cursor:pointer;position:absolute;top:0;left:0;z-index:3;border-radius:50px;-webkit-transition:all .4s ease;transition:all .4s ease;background-color:#000}#ccc .checkbox-toggle--slider input:checked~.checkbox-toggle-toggle{left:50%}#ccc .checkbox-toggle--slider.checkbox-toggle--dark{background-color:#111125;border-color:#111125}#ccc .checkbox-toggle--checkbox.checkbox-toggle--dark{background-color:#111125;border-color:#fff}#ccc .checkbox-toggle--dark .checkbox-toggle-toggle{background-color:#2f2f5f}#ccc .checkbox-toggle--light{background-color:#555;border-color:#555}#ccc .checkbox-toggle--light .checkbox-toggle-toggle{background-color:#000}#ccc .checkbox-toggle--light .checkbox-toggle-on,#ccc .checkbox-toggle--slider.checkbox-toggle--light .checkbox-toggle-off{color:#fff}#ccc .ccc-alert{border-radius:8px;margin:24px 0;padding:16px}#ccc .ccc-alert-title{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding:0}#ccc .ccc-alert-icon{display:inline-block;width:30px;height:30px;margin:0 8px 0 0;flex-shrink:0}#ccc .ccc-alert-break{margin:12px 0}.third-party-cookie-link{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;margin:16px 0}.third-party-cookie-name{font-size:1em;font-weight:700}.third-party-cookie-icon{display:inline-block;width:16px;height:16px;margin-left:16px}#ccc .ccc-content--dark .ccc-alert{color:#fff;fill:#fff;background:#111125}#ccc .ccc-content--dark .third-party-cookie-link{color:#fff;background:#111125}#ccc .ccc-content--light .ccc-alert,#ccc .ccc-content--light .third-party-cookie-link{background:#eaeaea}#ccc .ccc-module--popup{left:0;right:0;top:0;bottom:0;opacity:1;-webkit-animation-name:slide-up;animation-name:slide-up;-webkit-animation-duration:.4s;animation-duration:.4s;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc .ccc-module--popup #ccc-content{width:90%;height:90%;max-height:600px;max-width:600px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);border-radius:12px}#ccc .ccc-notify-box-dismiss{display:none!important}@media (min-width:600px){#ccc #ccc-notify.ccc-notify__box{opacity:1;-webkit-animation-name:box-slide-up;animation-name:box-slide-up;-webkit-animation-duration:.8s;animation-duration:.8s;-webkit-animation-iteration-count:1;animation-iteration-count:1;width:90%;height:90%;max-height:240px;max-width:480px;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);border-radius:12px;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;justify-content:space-around;box-sizing:border-box;padding:32px 64px}#ccc .ccc-notify-box-dismiss{display:block!important;position:absolute!important;top:16px!important;right:16px!important}}#ccc #ccc-notify{position:fixed;bottom:0;left:0;right:0;height:auto;min-height:48px;padding:16px;margin:0;border-radius:0;overflow:hidden;z-index:30;display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-pack:justify;justify-content:space-between;opacity:1;-webkit-animation-name:slide-up;animation-name:slide-up;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc #ccc-notify,#ccc #ccc-notify.ccc-notify__top{-webkit-animation-duration:.4s;animation-duration:.4s}#ccc #ccc-notify.ccc-notify__top{top:0;bottom:auto;-webkit-animation-name:slide-down;animation-name:slide-down;-webkit-animation-iteration-count:1;animation-iteration-count:1}#ccc #ccc-notify h3{padding:0}#ccc #ccc-notify p{margin:0;opacity:.8;font-size:.9em}#ccc .ccc-notify-buttons{position:relative;margin-top:16px;padding-right:24px}#ccc .ccc-notify-button{border:2px solid;border-radius:4px;padding:8px 16px!important;font-size:1em;margin:4px 8px 4px 0;font-weight:400;line-height:1.5em;background:transparent;cursor:pointer}#ccc #ccc-notify-dismiss{cursor:pointer;position:absolute;top:-4px;right:0;width:24px;height:24px;display:-webkit-inline-box;display:inline-flex;padding:0!important;border:0;background-color:transparent}@media (min-width:400px){#ccc #ccc-notify-dismiss{position:relative;right:auto}#ccc .ccc-notify-buttons{padding-right:0}}@media (min-width:600px){#ccc #ccc-notify{font-size:12px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row;-webkit-box-align:center;align-items:center}#ccc .ccc-notify-buttons{margin-top:0;white-space:nowrap;flex-shrink:0}}@media (min-width:1200px){#ccc #ccc-notify{z-index:10;font-size:16px;padding:16px 100px}}#ccc .ccc-content--dark #ccc-notify,#ccc .ccc-content--dark #ccc-notify span{color:#fff;fill:#fff;background-color:#313147}#ccc .ccc-content--dark .ccc-notify-button,#ccc .ccc-content--dark .ccc-notify-button span{color:#fff;border-color:#fff}#ccc .ccc-content--dark .ccc-button-solid,#ccc .ccc-content--dark .ccc-button-solid span{color:#111125;background:#fff;font-weight:700}.ccc-notify-link{border:0!important;text-decoration:underline}#ccc .ccc-content--light #ccc-notify,#ccc .ccc-content--light #ccc-notify span{color:#000;fill:#000;background:#f4f4f4}#ccc .ccc-content--light .ccc-notify-button,#ccc .ccc-content--light .ccc-notify-button span{color:#000;border-color:#000}#ccc .ccc-content--light .ccc-button-solid,#ccc .ccc-content--light .ccc-button-solid span{color:#fff;background:#000;font-weight:700}.ccc-info-link{font-size:.8em;font-weight:700;text-decoration:none}.ccc-info-link .svg-element{width:14px;height:14px;margin-left:6px}#ccc .ccc-module--slideout .ccc-info{height:100px}#ccc[popup] .ccc-info{height:40px}@media print{#ccc{display:none!important}}#ccc-close-label{display:block;font-size:16px}#ccc .ccc-panel--indent #ccc-title{padding-right:180px}#ccc-close.ccc-close--labelled{top:0;right:0;padding:8px!important}#ccc-content.ccc-content--light #ccc-close.ccc-close--labelled{background-color:#eaeaea}#ccc-content.ccc-content--dark #ccc-close.ccc-close--labelled{background-color:#111125}#ccc-end{margin:16px 0 32px}#ccc-dismiss-button{display:block}#ccc .ccc-content--highlight .ccc-link.ccc-tabbable:focus{padding:8px;-webkit-filter:invert(100%);filter:invert(100%)}#ccc .ccc-content--highlight.ccc-content--light .ccc-link.ccc-tabbable:focus{border-color:#eaeaea!important;background-color:#eaeaea!important}#ccc .ccc-content--highlight.ccc-content--dark .ccc-link.ccc-tabbable:focus{border-color:#111125!important;background-color:#111125!important}#ccc .ccc-content--highlight #ccc-close:focus,#ccc .ccc-content--highlight .ccc-button-solid:focus,#ccc .ccc-content--highlight .checkbox-toggle-input:focus~.checkbox-toggle-toggle,#ccc .ccc-content--highlight .third-party-cookie-link:focus{-webkit-filter:invert(100%);filter:invert(100%)}#ccc .ccc-content--highlight.ccc-content--light .ccc-tabbable:focus{box-shadow:0 4px 8px 0 hsla(0,0%,100%,.2),0 6px 20px 0 hsla(0,0%,100%,.2)}#ccc .ccc-content--highlight.ccc-content--dark .ccc-tabbable:focus{box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.2)}#ccc #ccc-icon:not(.ccc-icon--highlight),#ccc :not(.ccc-content--highlight) *,#ccc :not(.ccc-content--highlight) .ccc-tabbable{outline:none}#ccc .ccc-content--highlight .ccc-tabbable:active,#ccc .ccc-content--highlight .ccc-tabbable:hover,#ccc .ccc-icon--highlight:active,#ccc .ccc-icon--highlight:hover{box-shadow:none!important;-webkit-filter:none!important;filter:none!important}.ccc-panel{position:absolute;top:24px;left:24px;right:24px}.ccc-panel.hidden{opacity:0;height:0;overflow:hidden}.ccc-panel.visible{opacity:1;height:auto;-webkit-transition:opacity .4s;transition:opacity .4s}#ccc .iab-vendor{margin:0 0 8px}#ccc .iab-vendor-heading{font-size:.875em;font-weight:400;text-decoration:underline}#ccc .cmp-button-holder{font-size:.75em;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between}#ccc .cmp-back{opacity:.5;-webkit-transition:opacity .4s;transition:opacity .4s}#ccc .cmp-back:hover{opacity:1}.ccc-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}@-webkit-keyframes fade-in{0%{opacity:0}to{opacity:1}}@keyframes fade-in{0%{opacity:0}to{opacity:1}}@-webkit-keyframes slide-right{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slide-right{0%{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@-webkit-keyframes slide-left{0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slide-left{0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@-webkit-keyframes slide-up{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slide-up{0%{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@-webkit-keyframes box-slide-up{0%{-webkit-transform:translate3d(-50%,100%,0);transform:translate3d(-50%,100%,0)}to{-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}}@keyframes box-slide-up{0%{-webkit-transform:translate3d(-50%,100%,0);transform:translate3d(-50%,100%,0)}to{-webkit-transform:translate3d(-50%,-50%,0);transform:translate3d(-50%,-50%,0)}}@-webkit-keyframes slide-down{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}@keyframes slide-down{0%{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{-webkit-transform:translateZ(0);transform:translateZ(0)}}#ccc .iab-object{position:relative;height:48px;width:98%}#ccc .iab-object.iab-object--vendor{width:85%}#ccc .iab-object .checkbox-toggle{top:4px;left:0;right:auto}#ccc .iab-object .checkbox-toggle-label{width:18px;height:18px}#ccc .iab-object .checkbox-toggle--checkbox input:checked~.checkbox-toggle-toggle:after{left:7px;top:3px;width:3px;height:8px;border-width:0 2px 2px 0}#ccc .iab-object-label{display:block;margin-left:32px;font-size:.75em}#ccc .vendor-details{font-size:.75rem;margin-bottom:16px}#ccc .vendor-details h4{margin:.5rem 0}#ccc .ccc-title.ccc-title--iab{margin-bottom:1rem}#ccc .optional-cookie--iab{margin-left:32px}</style></head>
+<body data-new-gr-c-s-check-loaded="14.1268.0" data-gr-ext-installed="">
+    <div class="canvas">
+
+        <a class="govuk-skip-link" href="#content">Skip to main content</a>
+
+        
+<header class="site-header" aria-label="header">
+        <div class="container">
+                <a role="link" class="logo" href="/">
+                    <img role="link" src="/media/jdyngg5y/ukdmo_header_svg_new.svg" alt="UK DMO Logo">
+                </a>
+                <nav aria-label="global navigation">
+                    <ul class="nav-top" role="tree">
+                            <li class="nav-li" role="presentation"><a role="treeitem" href="/about/">About</a></li>
+                            <li class="nav-li" role="presentation"><a role="treeitem" href="/help/">Help</a></li>
+                            <li class="nav-li" role="presentation"><a role="treeitem" href="/careers/">Careers</a></li>
+                            <li class="nav-li" role="presentation"><a role="treeitem" href="/contact/">Contacts</a></li>
+                    </ul>
+                </nav>
+
+            
+    <form action="/search/" method="get">
+        <div class="input-group site-search">
+            <label for="Desktop-Search-Input" class="sr-only">Search dmo.gov.uk</label>
+            <input type="text" id="Desktop-Search-Input" data-provide="typeahead" placeholder="Search dmo.gov.uk" class="form-control" name="q">
+            <div class="input-group-btn">
+                <button type="submit" id="Desktop-Search-Button" class="btn btn-default" aria-label="submit search">
+                    <span class="to-read">submit search</span>
+                    <i role="presentation" class="icon-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+
+        </div>
+
+
+    <nav class="navbar navbar-default" aria-label="Primary Navigation">
+        <div class="container container-fluid">
+
+            <!-- Search and menu toggle-->
+            <div class="navbar-header right">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-search" aria-expanded="false">
+                    <span class="sr-only">Toggle search</span>
+                    <span role="presentation" class="icon icon-search"></span>
+                </button>
+                <button type="button" class="navbar-toggle collapsed" aria-label="Toggle navigation" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+                    <span class="sr-only">toggle navigation</span>
+                    <span role="presentation" class="icon-menu"></span>
+                    <span role="presentation" class="icon icon-close"></span>
+                </button>
+            </div>
+
+            <!-- Search bar -->
+            <div class="collapse navbar-collapse" id="nav-search">
+                
+    <form action="/search/" method="get">
+        <div class="input-group site-search">
+            <label for="Mobile-Search-Input" class="sr-only">Search dmo.gov.uk</label>
+            <input type="text" id="Mobile-Search-Input" data-provide="typeahead" placeholder="Search dmo.gov.uk" class="form-control" name="q">
+            <div class="input-group-btn">
+                <button type="submit" id="Mobile-Search-Button" class="btn btn-default" aria-label="submit search">
+                    <span class="to-read">submit search</span>
+                    <i role="presentation" class="icon-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+            </div>
+
+            <!-- Main navigation -->
+            <nav class="collapse navbar-collapse" id="nav-main" aria-label="Main Navigation">
+                    <ul role="menu" class="nav navbar-nav" data-smartmenus-id="17682887998670806">
+
+                                <li role="presentation" class="dropdown">
+                                    <a role="menuitem" href="/responsibilities/" class="dropdown-toggle has-submenu" aria-label="Responsibilities , For keyboard users, please use the enter key to open the navigation and ESC key to close the navigation" id="sm-17682887998670806-1" aria-haspopup="true" aria-controls="sm-17682887998670806-2" aria-expanded="false">
+                                        Responsibilities
+                                        <span role="presentation" class="icon icon-plus"></span>
+                                        <span role="presentation" class="icon icon-minus"></span>
+                                    </a>
+                                    <ul role="group" class="dropdown-menu" id="sm-17682887998670806-2" aria-hidden="true" aria-labelledby="sm-17682887998670806-1" aria-expanded="false">
+                                        <li role="presentation">
+                                            <a role="menuitem" href="/responsibilities/">Responsibilities Home</a>
+                                        </li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/financing-remit/">Financing Remit</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/gilt-market/">Gilt Market</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/money-markets/">Money Markets</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/green-gilts/">Green Gilts</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/local-authority-lending/">Local Authority Lending</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/public-sector-funds-crnd/">Public Sector Funds (CRND)</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/guarantee-schemes/">Guarantee Schemes</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/responsibilities/standing-repo/">Standing Repo</a></li>
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a role="menuitem" href="/publications/?offset=0&amp;itemsPerPage=20&amp;parentFilter=-1&amp;childFilter=-1&amp;startMonth=4&amp;startYear=2024" class="dropdown-toggle has-submenu" aria-label="Publications , For keyboard users, please use the enter key to open the navigation and ESC key to close the navigation" id="sm-17682887998670806-3" aria-haspopup="true" aria-controls="sm-17682887998670806-4" aria-expanded="false">
+                                        Publications
+                                        <span role="presentation" class="icon icon-plus"></span>
+                                        <span role="presentation" class="icon icon-minus"></span>
+                                    </a>
+                                    <ul role="group" class="dropdown-menu" id="sm-17682887998670806-4" aria-hidden="true" aria-labelledby="sm-17682887998670806-3" aria-expanded="false">
+                                        <li role="presentation">
+                                            <a role="menuitem" href="/publications/?offset=0&amp;itemsPerPage=20&amp;parentFilter=-1&amp;childFilter=-1&amp;startMonth=4&amp;startYear=2024">Publications Home</a>
+                                        </li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/gilt-market/">Gilt Market</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/money-markets/">Money Markets</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/corporate-governance/">Corporate Governance</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/?offset=0&amp;itemsPerPage=20&amp;parentFilter=1433&amp;childFilter=-1&amp;startMonth=1&amp;startYear=2024">Gilt Announcements</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/annual-reports-and-accounts/">Annual Reports and Accounts</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/annual-reviews/">Annual Reviews</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/publications/quarterly-reviews/">Quarterly Reviews</a></li>
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a role="menuitem" href="/calendars/" class="dropdown-toggle has-submenu" aria-label="Calendars , For keyboard users, please use the enter key to open the navigation and ESC key to close the navigation" id="sm-17682887998670806-5" aria-haspopup="true" aria-controls="sm-17682887998670806-6" aria-expanded="false">
+                                        Calendars
+                                        <span role="presentation" class="icon icon-plus"></span>
+                                        <span role="presentation" class="icon icon-minus"></span>
+                                    </a>
+                                    <ul role="group" class="dropdown-menu" id="sm-17682887998670806-6" aria-hidden="true" aria-labelledby="sm-17682887998670806-5" aria-expanded="false">
+                                        <li role="presentation">
+                                            <a role="menuitem" href="/calendars/">Calendars Home</a>
+                                        </li>
+                                                <li role="presentation"><a role="menuitem" href="/calendars/events-calendar/">Events Calendar</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/calendars/issuance-calendar/">Issuance Calendar</a></li>
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a role="menuitem" href="/investor-information/" class="dropdown-toggle has-submenu" aria-label="Investor Information , For keyboard users, please use the enter key to open the navigation and ESC key to close the navigation" id="sm-17682887998670806-7" aria-haspopup="true" aria-controls="sm-17682887998670806-8" aria-expanded="false">
+                                        Investor Information
+                                        <span role="presentation" class="icon icon-plus"></span>
+                                        <span role="presentation" class="icon icon-minus"></span>
+                                    </a>
+                                    <ul role="group" class="dropdown-menu" id="sm-17682887998670806-8" aria-hidden="true" aria-labelledby="sm-17682887998670806-7" aria-expanded="false">
+                                        <li role="presentation">
+                                            <a role="menuitem" href="/investor-information/">Investor Information Home</a>
+                                        </li>
+                                                <li role="presentation"><a role="menuitem" href="/investor-information/institutional-investors/">Institutional Investors</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/investor-information/retail-investors/">Retail Investors</a></li>
+                                    </ul>
+                                </li>
+                                <li role="presentation" class="dropdown">
+                                    <a role="menuitem" href="/data/" class="dropdown-toggle has-submenu" aria-label="Data , For keyboard users, please use the enter key to open the navigation and ESC key to close the navigation" id="sm-17682887998670806-9" aria-haspopup="true" aria-controls="sm-17682887998670806-10" aria-expanded="false">
+                                        Data
+                                        <span role="presentation" class="icon icon-plus"></span>
+                                        <span role="presentation" class="icon icon-minus"></span>
+                                    </a>
+                                    <ul role="group" class="dropdown-menu" id="sm-17682887998670806-10" aria-hidden="true" aria-labelledby="sm-17682887998670806-9" aria-expanded="false">
+                                        <li role="presentation">
+                                            <a role="menuitem" href="/data/">Data Home</a>
+                                        </li>
+                                                <li role="presentation"><a role="menuitem" href="/data/gilt-market/">Gilt Market</a></li>
+                                                <li role="presentation"><a role="menuitem" href="/data/treasury-bills/">Treasury Bills</a></li>
+                                    </ul>
+                                </li>
+                    </ul>
+            </nav>
+        </div>
+    </nav>
+</header>
+
+
+        <div class="content-wrapper" role="main" id="content">
+            <div class="nav-overlay"></div>
+            
+
+<div class="container two-column-page">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/data/">Data</a></li>
+                        <li class="breadcrumbNoLink">Outright Gilt Issuance Calendar</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+                <h1>
+                    Outright Gilt Issuance Calendar
+                </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-3">
+            
+    <nav id="nav-left">
+        <ul class="nav nav-pills nav-stacked">
+                <li class="collapse-heading  ">
+                    <a href="/data/gilt-market/">Gilt Market</a>
+                        <a role="button" href="#17087" class="data-toggle collapsed" aria-label="Toggle Gilt Market" data-toggle="collapse" data-target="#17087" aria-expanded="false">
+                            <span role="presentation" class="icon icon-plus">
+                                <span class="to-read">Toggle Gilt Market button collapsed</span>
+                            </span>
+                            <span role="presentation" class="icon icon-minus">
+                                <span class="to-read">Toggle Gilt Market button expanded</span>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="17087" aria-expanded="false">
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/results-of-gilt-operations/">Results of Gilt Operations</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/historical-prices-and-yields/">Historical Prices and Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/gilts-in-issue/">Gilts in Issue</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/index-linked-gilts/">Index-linked Gilts</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/government-holdings/">Government Holdings</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/turnover-data/">Turnover Data</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/gross-and-net-issuance-data/">Gross and Net Issuance Data</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/aggregated-yields/">Aggregated Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/gilt-market/average-gilt-issuance-yields/">Average Gilt Issuance Yields</a>
+                                
+
+                            </li>
+                        </ul>
+                </li>
+                <li class="collapse-heading  ">
+                    <a href="/data/treasury-bills/">Treasury Bills</a>
+                        <a role="button" href="#17120" class="data-toggle collapsed" aria-label="Toggle Treasury Bills" data-toggle="collapse" data-target="#17120" aria-expanded="false">
+                            <span role="presentation" class="icon icon-plus">
+                                <span class="to-read">Toggle Treasury Bills button collapsed</span>
+                            </span>
+                            <span role="presentation" class="icon icon-minus">
+                                <span class="to-read">Toggle Treasury Bills button expanded</span>
+                            </span>
+                        </a>
+                        <ul class="collapse" id="17120" aria-expanded="false">
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/tender-results/">Tender Results</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/prices-and-yields/">Prices and Yields</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/treasury-bill-issuance-and-stock/">Treasury Bill Issuance and Stock</a>
+                                
+
+                            </li>
+                            <li class="collapse-heading  ">
+                                <a class="" href="/data/treasury-bills/treasury-bills-outstanding/">Treasury Bills Outstanding</a>
+                                
+
+                            </li>
+                        </ul>
+                </li>
+        </ul>
+    </nav>
+
+        </div>
+
+        <div class="col-xs-12 col-md-9">
+            
+
+
+    <!--script src="~/Umbraco/lib/jquery-ui/jquery-ui.min.js"></script -->
+    <script defer="" src="/dist/scripts/reports/DataReport.js"></script>
+    <script defer="" src="/dist/scripts/reports/PDFData.js"></script>
+    <script defer="" src="/dist/scripts/reports/PDFDataReport.js"></script>
+    <script>
+        var pdfreportdata = {
+  "ReportCode": "D5D",
+  "ReportInformation": {
+    "code": "D5D",
+    "reportSourceId": 2,
+    "reportTypeId": 2,
+    "landscape": false,
+    "zoomFactor": 100,
+    "exportTypes": [
+      {
+        "Id": 1,
+        "Name": "Excel",
+        "ExtensionName": "xls"
+      },
+      {
+        "Id": 2,
+        "Name": "Word",
+        "ExtensionName": "doc"
+      }
+    ],
+    "name": "Outright Gilt Issuance Calendar",
+    "description": "This report provides details on the gilt issuances (and other outright issuance) for both the current financial year and previous years.  The issuance calendar for each financial year is published just ahead of the start of the financial year in question.  Each quarter the calendar is refined to name the specific gilts to be auctioned in that quarter, and in the week before an auction, further refined to include the size of that auction.  For new bonds, the coupon rate is announced at the same time as the size of the auction.  On the day of an auction the cash proceeds are added to the calendar.",
+    "extendedDescription": null,
+    "footnote1": "Syndications and gilt tenders are added to this calendar when their precise date is announced. ",
+    "footnote2": "In 2009-10, starting with the auction on 1 June 2009, the DMO has offered an option to successful bidders at auctions to purchase additional stock which will be available to successful bidders at the average accepted (or strike) price at the auction.",
+    "footnote3": "Amounts issued include the exercise of the Post Auction Option. ",
+    "footnote4": null,
+    "footnote5": null,
+    "footnote6": null
+  },
+  "ReportParameters": [
+    {
+      "reportCode": null,
+      "internalName": "Financial Year",
+      "prompt": "Financial Year",
+      "parameterTypeId": 3,
+      "defaultValue1": null,
+      "defaultValue2": null,
+      "listItems": [
+        {
+          "key": "2025-26",
+          "value": "2025-26"
+        },
+        {
+          "key": "2024-25",
+          "value": "2024-25"
+        },
+        {
+          "key": "2023-24",
+          "value": "2023-24"
+        },
+        {
+          "key": "2022-23",
+          "value": "2022-23"
+        },
+        {
+          "key": "2021-22",
+          "value": "2021-22"
+        },
+        {
+          "key": "2020-21",
+          "value": "2020-21"
+        },
+        {
+          "key": "2019-20",
+          "value": "2019-20"
+        },
+        {
+          "key": "2018-19",
+          "value": "2018-19"
+        },
+        {
+          "key": "2017-18",
+          "value": "2017-18"
+        },
+        {
+          "key": "2016-17",
+          "value": "2016-17"
+        },
+        {
+          "key": "2015-16",
+          "value": "2015-16"
+        },
+        {
+          "key": "2014-15",
+          "value": "2014-15"
+        },
+        {
+          "key": "2013-14",
+          "value": "2013-14"
+        },
+        {
+          "key": "2012-13",
+          "value": "2012-13"
+        },
+        {
+          "key": "2011-12",
+          "value": "2011-12"
+        },
+        {
+          "key": "2010-11",
+          "value": "2010-11"
+        },
+        {
+          "key": "2009-10",
+          "value": "2009-10"
+        },
+        {
+          "key": "2008-09",
+          "value": "2008-09"
+        },
+        {
+          "key": "2007-08",
+          "value": "2007-08"
+        },
+        {
+          "key": "2006-07",
+          "value": "2006-07"
+        },
+        {
+          "key": "2005-06",
+          "value": "2005-06"
+        },
+        {
+          "key": "2004-05",
+          "value": "2004-05"
+        },
+        {
+          "key": "2003-04",
+          "value": "2003-04"
+        },
+        {
+          "key": "2002-03",
+          "value": "2002-03"
+        },
+        {
+          "key": "2001-02",
+          "value": "2001-02"
+        },
+        {
+          "key": "2000-01",
+          "value": "2000-01"
+        },
+        {
+          "key": "1999-00",
+          "value": "1999-00"
+        },
+        {
+          "key": "1998-99",
+          "value": "1998-99"
+        }
+      ],
+      "valuesLimit": null,
+      "dataTypeId": 5,
+      "ParameterNumber": 0,
+      "DefaultDate": "0001-01-01T00:00:00",
+      "DefaultDate2": "0001-01-01T00:00:00",
+      "MinDate": null,
+      "MaxDate": null
+    }
+  ],
+  "FooterList": [
+    "Syndications and gilt tenders are added to this calendar when their precise date is announced. ",
+    "In 2009-10, starting with the auction on 1 June 2009, the DMO has offered an option to successful bidders at auctions to purchase additional stock which will be available to successful bidders at the average accepted (or strike) price at the auction.",
+    "Amounts issued include the exercise of the Post Auction Option. "
+  ],
+  "ErrorMessage": null,
+  "Result": null,
+  "Name": null,
+  "Filename": null,
+  "ContentType": null,
+  "ResultMessage": null
+};
+    </script>
+            <div class="notice-block show" id="notice_box">
+                <div tabindex="0" role="button" class="notice-toggle pull-right" data-toggle="notice-block" data-target="#notice_box" aria-label="Report overview" aria-expanded="true">
+                    <span role="presentation" class="icon-plus"></span>
+                    <span role="presentation" class="icon-minus"></span>
+                </div>
+                <div class="notice-block-title">
+                    <h2>Report Overview</h2>
+                </div>
+                <div class="notice-block-body">
+                    This report provides details on the gilt issuances (and other outright issuance) for both the current financial year and previous years.  The issuance calendar for each financial year is published just ahead of the start of the financial year in question.  Each quarter the calendar is refined to name the specific gilts to be auctioned in that quarter, and in the week before an auction, further refined to include the size of that auction.  For new bonds, the coupon rate is announced at the same time as the size of the auction.  On the day of an auction the cash proceeds are added to the calendar.
+                </div>
+            </div>
+<div>
+        <form id="pdfDataReport" name="pdfDataReport">
+
+
+    <div class="row form-group no-border">
+        <label id="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" for="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]">
+            Financial Year:<span class="required">*</span>
+            <span class="form-control-wrapper ml-10">
+                <select aria-labelledby="ParameterLabelStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" class="form-control" id="ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]" name="Financial Year"><option value="2025-26">2025-26</option>
+<option value="2024-25">2024-25</option>
+<option value="2023-24">2023-24</option>
+<option value="2022-23">2022-23</option>
+<option value="2021-22">2021-22</option>
+<option value="2020-21">2020-21</option>
+<option value="2019-20">2019-20</option>
+<option value="2018-19">2018-19</option>
+<option value="2017-18">2017-18</option>
+<option value="2016-17">2016-17</option>
+<option value="2015-16">2015-16</option>
+<option value="2014-15">2014-15</option>
+<option value="2013-14">2013-14</option>
+<option value="2012-13">2012-13</option>
+<option value="2011-12">2011-12</option>
+<option value="2010-11">2010-11</option>
+<option value="2009-10">2009-10</option>
+<option value="2008-09">2008-09</option>
+<option value="2007-08">2007-08</option>
+<option value="2006-07">2006-07</option>
+<option value="2005-06">2005-06</option>
+<option value="2004-05">2004-05</option>
+<option value="2003-04">2003-04</option>
+<option value="2002-03">2002-03</option>
+<option value="2001-02">2001-02</option>
+<option value="2000-01">2000-01</option>
+<option value="1999-00">1999-00</option>
+<option value="1998-99">1998-99</option>
+</select>
+            </span>
+        </label>
+    </div>
+                    <div class="parameterErrors" id="paramError1"></div>
+        </form>
+    <script defer="" src="/dist/scripts/reports/ClearErrors.js"></script>
+    <div id="error" class="alert alert-danger" style="display: none;"></div>
+    <br>
+
+    <input type="hidden" id="exportFormatName" value="exportFormat">
+
+    <div class="button-block">
+		<div id="export-label"><b>Export options</b></div>
+        <div id="dvLoading" style="display: none;">
+            <img src="/dist/images/loading.gif" width="15" alt="Loading...">
+        </div>
+        <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateParameterPDFDataReport()">PDF</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('xls')">Excel</button>
+            <button type="button" class="btn btn-secondary" onclick="clearErrors(); GenerateDownloadDataReport('doc')">Word</button>
+    </div>
+    <br>
+
+</div>
+        <!--script src="~/Assets/scripts/datepicker.js"></script -->
+
+        </div>
+    </div>
+</div>
+        </div>
+
+        
+<footer class="site-footer" aria-label="footer">
+        <div class="container">
+            <div class="row footer-columns">
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <h2>About the DMO</h2>
+                            <ul role="tree" aria-label="About the DMO">
+                                    <li role="presentation"><a role="treeitem" href="/about/who-we-are/">Who we are</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/">Our responsibilities</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/about/external-communications/">External communications</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/about/freedom-of-information/">Freedom of Information</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/terms-of-use/privacy-notice/">Privacy Notice</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/terms-of-use/cookie-policy/">Cookie Policy</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/help/accessibility/">Accessibility</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <h2>Responsibilities</h2>
+                            <ul role="tree" aria-label="Responsibilities">
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/financing-remit/">Financing Remit</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/gilt-market/">Gilt Market</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/money-markets/">Money Markets</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/green-gilts/">Green Gilts</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/local-authority-lending/">Local Authority Lending</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/public-sector-funds-crnd/">Public Sector Funds (CRND)</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/guarantee-schemes/">Guarantee Schemes</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/responsibilities/gilt-market/price-provision/">Price Provision</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <h2>News &amp; Publications</h2>
+                            <ul role="tree" aria-label="News &amp; Publications">
+                                    <li role="presentation"><a role="treeitem" href="/publications/?offset=0&amp;itemsPerPage=20&amp;parentFilter=-1&amp;childFilter=-1&amp;startMonth=4&amp;startYear=2021">Publications</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/#news">News</a></li>
+                            </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-3 col-md-2">
+                        <h2>Calendars</h2>
+                            <ul role="tree" aria-label="Calendars">
+                                    <li role="presentation"><a role="treeitem" href="/calendars/events-calendar/">Events Calendar</a></li>
+                                    <li role="presentation"><a role="treeitem" href="/calendars/issuance-calendar/">Issuance Calendar</a></li>
+                            </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 footer-logo-container">
+                        <img class="footer-logo" src="/media/kgfi3liq/ukdmo_footer_grey_new.svg" alt="UK DMO Footer Logo">
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul role="tree" class="footer-links" aria-label="footer links">
+                            <li role="presentation"><a role="treeitem" href="/help/">Help</a></li>
+                            <li role="presentation"><a role="treeitem" href="/careers/">Careers</a></li>
+                            <li role="presentation"><a role="treeitem" href="/contact/">Contact</a></li>
+                            <li role="presentation"><a role="treeitem" href="/sitemap/">Sitemap</a></li>
+                            <li role="presentation"><a role="treeitem" href="/terms-of-use/">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+</footer>
+
+
+    </div>
+
+    <script type="text/javascript" src="/dist/scripts/main.min.js?v=SGdAbtvyeSanpJUx3URJqaRuHqxtwo_zbFcU-yeSg5I"></script>
+    <script type="text/javascript" src="/dist/scripts/reports/TableData.js"></script>
+
+    
+
+
+
+<div id="ccc" role="region" aria-label="Cookie Preferences" aria-live="polite" style="z-index: 2147483647;"><div id="ccc-overlay"></div><div id="ccc-module" class="ccc-module--slideout ccc-module--left" role="dialog"><div id="ccc-content" class="ccc-content--light  "><button id="ccc-close" class="ccc-link ccc-tabbable " tabindex="0" aria-label="Close Cookie Control"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><title>Cookie Control Close Icon</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button><div id="cc-panel" class="ccc-panel "><h2 id="ccc-title">We use necessary cookies to make our site work. We would also like to set optional analytics cookies to help us improve it. We won't set optional cookies unless you enable them. Using this tool will set a cookie on your device to remember your preferences. 
+ For more detailed information about the cookies we use, see our  <a href="/terms-of-use/cookie-policy/">Cookie Policy</a>. </h2><p class="ccc-intro">Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is being used.</p><div id="ccc-button-holder"><button id="ccc-recommended-settings" class="ccc-notify-button ccc-button-solid ccc-tabbable ccc-accept-button"><span>Accept Recommended Settings</span></button><button id="ccc-reject-settings" class="ccc-notify-button ccc-link ccc-tabbable ccc-reject-button"><span>I Do Not Accept</span></button></div><hr aria-hidden="true"><h3 id="ccc-necessary-title">Necessary Cookies</h3><p id="ccc-necessary-description">Necessary cookies enable core functionality such as security, network management, and accessibility. You may disable these by changing your browser settings, but this may affect how the website functions.</p><hr aria-hidden="true"><div id="ccc-optional-categories"><div class="optional-cookie" aria-live="polite"><h3 class="optional-cookie-header">Analytics</h3><p>We'd like to set Google Analytics cookies to help us to improve our website by collecting and reporting information on how you use it. For more information on how these cookies work please see our <a href="/terms-of-use/cookie-policy/">Cookie Policy</a>. The cookies collect information in an anonymous form.</p><div class="checkbox-toggle checkbox-toggle--slider checkbox-toggle--light ccc-tabbable"><label class="checkbox-toggle-label"><input class="checkbox-toggle-input" type="checkbox"><span class="checkbox-toggle-text ccc-sr-only">Analytics</span><span class="checkbox-toggle-on" aria-hidden="true">On</span><span class="checkbox-toggle-off" aria-hidden="true">Off</span><span class="checkbox-toggle-toggle"></span></label></div><hr aria-hidden="true"></div></div><div id="ccc-info" class="ccc-info"><a id="ccc-info-link" class="ccc-link ccc-tabbable" href="https://www.civicuk.com/cookie-control" target="_blank" rel="noopener">About this tool<span class="ccc-svg-element"><span class="ccc-sr-only ">(Opens in a new window)</span><svg xmlns="http://www.w3.org/2000/svg" data-icon="external-link" viewBox="0 0 32 40" x="0px" y="0px"><title>Cookie Control Link Icon</title><path d="M32 0l-8 1 2.438 2.438-9.5 9.5-1.063 1.063 2.125 2.125 1.063-1.063 9.5-9.5 2.438 2.438 1-8zm-30 3c-.483 0-1.047.172-1.438.563-.391.391-.563.954-.563 1.438v25c0 .483.172 1.047.563 1.438.391.391.954.563 1.438.563h25c.483 0 1.047-.172 1.438-.563.391-.391.563-.954.563-1.438v-15h-3v14h-23v-23h15v-3h-16z"></path></svg></span></a></div></div></div></div><button id="ccc-icon" class="ccc-icon--left ccc-icon--light " aria-label="Set cookie preferences" accesskey="c" width="80" height="80" style="width: 80px; height: 80px;"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 72.5 72.5" enable-background="new 0 0 72.5 72.5"><title>Cookie Control Icon</title><g id="triangle"><path d="M0,0l72.5,72.5H0V0z"></path></g><g id="star"><path d="M33.2,51.9l-3.9-2.6l1.6-4.4l-4.7,0.2L25,40.6l-3.7,2.9l-3.7-2.9l-1.2,4.5l-4.7-0.2l1.6,4.4l-3.9,2.6l3.9,2.6l-1.6,4.4l4.7-0.2l1.2,4.5l3.7-2.9l3.7,2.9l1.2-4.5l4.7,0.2l-1.6-4.4L33.2,51.9z M24.6,55.3c-0.3,0.4-0.8,0.8-1.3,1s-1.1,0.3-1.9,0.3c-0.9,0-1.7-0.1-2.3-0.4s-1.1-0.7-1.5-1.4c-0.4-0.7-0.6-1.6-0.6-2.6c0-1.4,0.4-2.5,1.1-3.3c0.8-0.8,1.8-1.1,3.2-1.1c1.1,0,1.9,0.2,2.6,0.7s1.1,1.1,1.4,2L23,50.9c-0.1-0.3-0.2-0.5-0.3-0.6c-0.1-0.2-0.3-0.4-0.5-0.5s-0.5-0.2-0.7-0.2c-0.6,0-1.1,0.2-1.4,0.7c-0.2,0.4-0.4,0.9-0.4,1.7c0,1,0.1,1.6,0.4,2c0.3,0.4,0.7,0.5,1.2,0.5c0.5,0,0.9-0.1,1.2-0.4s0.4-0.7,0.6-1.2l2.3,0.7C25.2,54.3,25,54.8,24.6,55.3z"></path></g></svg></button></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

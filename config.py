@@ -53,7 +53,7 @@ PART1_REPORT_CODE = "D5D"
 #   - None: Select the latest/first financial year (default)
 #   - "2025-26": Select specific financial year
 #   - "2024-25", "2023-24", etc.
-TARGET_FINANCIAL_YEAR = "None"  # Testing with 2024-25 data
+TARGET_FINANCIAL_YEAR = None  # Set to None for latest, or e.g. "2024-25" for specific year
 
 # Column names in downloaded Excel file
 EXCEL_DATE_COLUMN = "Operation Date"

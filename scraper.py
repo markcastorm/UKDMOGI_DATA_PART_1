@@ -44,6 +44,7 @@ class UKDMOScraper:
         self.driver = None
         self.download_dir = config.DOWNLOADS_DIR
         self.target_url = config.PART1_URL
+        self.available_years = []
 
         # Ensure download directory exists
         os.makedirs(self.download_dir, exist_ok=True)
@@ -158,8 +159,7 @@ class UKDMOScraper:
                   If None, selects the latest (first option in dropdown)
 
         Returns:
-            tuple: (selected_year, available_years) where available_years is the
-                   full list of FY values from the dropdown (latest first)
+            str: The selected financial year value
         """
         logger.info("Selecting financial year...")
 
@@ -173,8 +173,8 @@ class UKDMOScraper:
             select = Select(select_element)
 
             # Get all available financial years (dropdown is latest-first)
-            available_years = [opt.get_attribute("value") for opt in select.options]
-            logger.info(f"Available financial years: {available_years[:5]}...")
+            self.available_years = [opt.get_attribute("value") for opt in select.options]
+            logger.info(f"Available financial years: {self.available_years[:5]}...")
 
             # Determine which year to select
             target_year = year if year else config.TARGET_FINANCIAL_YEAR
@@ -184,19 +184,19 @@ class UKDMOScraper:
                 select.select_by_index(0)
                 selected_year = select.first_selected_option.get_attribute("value")
                 logger.info(f"[OK] Selected latest financial year: {selected_year}")
-                return selected_year, available_years
+                return selected_year
 
             # Verify the target year exists in the dropdown
-            if target_year not in available_years:
-                logger.warning(f"Financial year '{target_year}' not found in dropdown. Available: {available_years[:5]}...")
+            if target_year not in self.available_years:
+                logger.warning(f"Financial year '{target_year}' not found in dropdown. Available: {self.available_years[:5]}...")
                 select.select_by_index(0)
                 selected_year = select.first_selected_option.get_attribute("value")
                 logger.info(f"[OK] Fell back to latest year: {selected_year}")
-                return selected_year, available_years
+                return selected_year
 
             select.select_by_value(target_year)
             logger.info(f"[OK] Selected financial year: {target_year}")
-            return target_year, available_years
+            return target_year
 
         except Exception as e:
             logger.error(f"Failed to select financial year: {str(e)}")
@@ -309,67 +309,131 @@ class UKDMOScraper:
             except Exception as e:
                 logger.warning(f"Error closing browser: {str(e)}")
 
+    def open_browser(self):
+        """
+        Open browser, navigate to page, and handle cookie consent.
+        Call this once before downloading for one or more financial years.
+
+        Returns:
+            list: Available financial years from the dropdown (latest first)
+        """
+        self.setup_driver()
+
+        if not self.navigate_to_page():
+            raise Exception("Failed to navigate to page")
+
+        self.handle_cookie_consent()
+
+        # Read available years from the dropdown (without selecting yet)
+        select_element = WebDriverWait(self.driver, config.ELEMENT_WAIT_TIMEOUT).until(
+            EC.presence_of_element_located((By.NAME, config.FINANCIAL_YEAR_SELECT_NAME))
+        )
+        select = Select(select_element)
+        self.available_years = [opt.get_attribute("value") for opt in select.options]
+        logger.info(f"Available financial years: {self.available_years[:5]}...")
+
+        return self.available_years
+
+    def _set_download_dir(self, directory):
+        """
+        Update Chrome's download directory at runtime via DevTools Protocol.
+
+        Args:
+            directory: Absolute path to the new download directory
+        """
+        os.makedirs(directory, exist_ok=True)
+        self.download_dir = directory
+
+        # Use Chrome DevTools Protocol to change download path on the fly
+        self.driver.execute_cdp_cmd("Page.setDownloadBehavior", {
+            "behavior": "allow",
+            "downloadPath": directory
+        })
+        logger.debug(f"Download directory set to: {directory}")
+
+    def download_for_year(self, financial_year=None):
+        """
+        Download Excel file for a specific financial year.
+        Browser must already be open (call open_browser first).
+        Re-navigates to ensure clean page state for each download.
+        Each FY downloads into its own subfolder (e.g. downloads/<timestamp>/2025-26/).
+
+        Args:
+            financial_year: Financial year string (e.g., "2025-26")
+                            If None, selects the latest (first option)
+
+        Returns:
+            dict: {"success": bool, "file_path": str, "financial_year": str, "error": str}
+        """
+        result = {
+            "success": False,
+            "file_path": None,
+            "financial_year": None,
+            "error": None
+        }
+
+        try:
+            # Re-navigate to get a clean page (cookies already accepted in session)
+            if not self.navigate_to_page():
+                result["error"] = "Failed to navigate to page"
+                return result
+
+            # Select financial year
+            selected_year = self.select_financial_year(financial_year)
+            result["financial_year"] = selected_year
+
+            # Set download dir to FY-specific subfolder
+            fy_download_dir = os.path.join(config.DOWNLOADS_DIR, selected_year)
+            self._set_download_dir(fy_download_dir)
+
+            # Click Excel download
+            if not self.click_excel_download():
+                result["error"] = "Failed to click Excel download button"
+                return result
+
+            # Wait for download
+            downloaded_file = self.wait_for_download()
+            if not downloaded_file:
+                result["error"] = "Download timeout or failed"
+                return result
+
+            result["success"] = True
+            result["file_path"] = downloaded_file
+            logger.info(f"[OK] Downloaded data for {selected_year}")
+            return result
+
+        except Exception as e:
+            logger.error(f"Download failed for {financial_year}: {str(e)}", exc_info=True)
+            result["error"] = str(e)
+            return result
+
     def scrape_part1(self, financial_year=None):
         """
-        Main scraping workflow for Part 1
+        Convenience method: single financial year scrape (opens and closes browser).
 
         Args:
             financial_year: Optional specific financial year to scrape
 
         Returns:
             dict: Result dictionary with status and file path
-                  {"success": bool, "file_path": str, "financial_year": str, "error": str}
         """
-        result = {
-            "success": False,
-            "file_path": None,
-            "financial_year": None,
-            "available_years": [],
-            "error": None
-        }
-
         try:
-            # Step 1: Setup driver
-            self.setup_driver()
-
-            # Step 2: Navigate to page
-            if not self.navigate_to_page():
-                result["error"] = "Failed to navigate to page"
-                return result
-
-            # Step 3: Handle cookie consent
-            self.handle_cookie_consent()
-
-            # Step 4: Select financial year
-            selected_year, available_years = self.select_financial_year(financial_year)
-            result["financial_year"] = selected_year
-            result["available_years"] = available_years
-
-            # Step 5: Click Excel download
-            if not self.click_excel_download():
-                result["error"] = "Failed to click Excel download button"
-                return result
-
-            # Step 6: Wait for download
-            downloaded_file = self.wait_for_download()
-            if not downloaded_file:
-                result["error"] = "Download timeout or failed"
-                return result
-
-            # Success!
-            result["success"] = True
-            result["file_path"] = downloaded_file
-
-            logger.info("[OK] Part 1 scraping completed successfully")
+            self.open_browser()
+            result = self.download_for_year(financial_year)
+            result["available_years"] = list(self.available_years)
             return result
 
         except Exception as e:
             logger.error(f"Scraping failed: {str(e)}", exc_info=True)
-            result["error"] = str(e)
-            return result
+            return {
+                "success": False,
+                "file_path": None,
+                "financial_year": None,
+                "available_years": list(self.available_years),
+                "error": str(e)
+            }
 
         finally:
-            # Always close driver
             self.close_driver()
 
 

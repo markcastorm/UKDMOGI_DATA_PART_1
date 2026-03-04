@@ -63,6 +63,7 @@ def print_banner():
 
 def print_configuration():
     """Print current configuration summary"""
+    fy_display = config.TARGET_FINANCIAL_YEAR if config.TARGET_FINANCIAL_YEAR else 'Auto (latest with data)'
     config_text = f"""
     Configuration:
     -----------------------------------------------------------------
@@ -71,7 +72,7 @@ def print_configuration():
     Source:            {config.SOURCE_DESCRIPTION}
 
     Target URL:        {config.PART1_URL}
-    Financial Year:    {config.TARGET_FINANCIAL_YEAR if config.TARGET_FINANCIAL_YEAR else 'Latest (default)'}
+    Financial Year:    {fy_display}
 
     Run Timestamp:     {config.RUN_TIMESTAMP}
     Output Directory:  {config.OUTPUT_DIR}
@@ -106,33 +107,17 @@ def setup_environment():
         return False
 
 
-def run_scraper(financial_year=None):
+def has_cash_data(parsed_data):
     """
-    Execute web scraping to download Excel file
+    Check if parsed data contains any rows with actual cash values.
 
     Args:
-        financial_year: Optional specific financial year to scrape
+        parsed_data: List of {"date": str, "cash_raised": float/None}
 
     Returns:
-        dict: Scraper result (includes 'available_years' list when financial_year is None)
+        bool: True if at least one row has a non-None cash_raised value
     """
-    log_step(logger, 1, 3, "Web Scraping - Downloading Excel file")
-
-    try:
-        scraper = UKDMOScraper()
-        result = scraper.scrape_part1(financial_year)
-
-        if result['success']:
-            log_success(logger, f"Excel file downloaded: {result['financial_year']}")
-            logger.info(f"File: {result['file_path']}")
-        else:
-            log_error(logger, f"Scraping failed: {result['error']}")
-
-        return result
-
-    except Exception as e:
-        log_error(logger, "Scraping stage failed", e)
-        return {"success": False, "error": str(e)}
+    return any(row['cash_raised'] is not None for row in parsed_data)
 
 
 def run_parser(excel_file_path):
@@ -145,8 +130,6 @@ def run_parser(excel_file_path):
     Returns:
         dict: Parser result
     """
-    log_step(logger, 2, 3, "Data Parsing - Extracting Operation Date and Cash Raised")
-
     try:
         parser = UKDMOParser()
         result = parser.parse_excel_file(excel_file_path)
@@ -179,8 +162,6 @@ def run_generator(parsed_data):
     Returns:
         dict: Generator result
     """
-    log_step(logger, 3, 3, "File Generation - Creating DATA and META CSV files")
-
     try:
         generator = UKDMOFileGenerator()
         result = generator.generate_files(parsed_data)
@@ -199,67 +180,15 @@ def run_generator(parsed_data):
         return {"success": False, "error": str(e)}
 
 
-def has_cash_data(parsed_data):
-    """
-    Check if parsed data contains any rows with actual cash values.
-
-    Args:
-        parsed_data: List of {"date": str, "cash_raised": float/None}
-
-    Returns:
-        bool: True if at least one row has a non-None cash_raised value
-    """
-    return any(row['cash_raised'] is not None for row in parsed_data)
-
-
-def run_pipeline_for_year(financial_year):
-    """
-    Run scrape -> parse -> generate for a single financial year.
-
-    Args:
-        financial_year: Financial year string (e.g. "2025-26") or None for latest
-
-    Returns:
-        tuple: (success, scraper_result, parser_result, generator_result, has_data)
-               has_data is False when scraping/parsing succeeded but no cash values found
-    """
-    # STAGE 1: WEB SCRAPING
-    scraper_result = run_scraper(financial_year)
-    if not scraper_result['success']:
-        return False, scraper_result, None, None, False
-
-    if shutdown_requested:
-        return False, scraper_result, None, None, False
-
-    # STAGE 2: DATA PARSING
-    parser_result = run_parser(scraper_result['file_path'])
-    if not parser_result['success']:
-        return False, scraper_result, parser_result, None, False
-
-    # Check if there's actual cash data before attempting file generation
-    if not has_cash_data(parser_result['data']):
-        logger.warning(f"No cash data found for financial year {scraper_result['financial_year']}")
-        return True, scraper_result, parser_result, None, False
-
-    if shutdown_requested:
-        return False, scraper_result, parser_result, None, False
-
-    # STAGE 3: FILE GENERATION
-    generator_result = run_generator(parser_result['data'])
-    if not generator_result['success']:
-        return False, scraper_result, parser_result, generator_result, False
-
-    return True, scraper_result, parser_result, generator_result, True
-
-
 def main(financial_year=None):
     """
     Main orchestration workflow
 
     When financial_year is None (auto mode):
-      1. Try the latest financial year from the dropdown
-      2. If it has no cash data, fall back to the next financial year
-      3. Only tries up to 2 financial years
+      1. Open browser once
+      2. Try the latest financial year from the dropdown
+      3. If it has no cash data, try the next financial year (same browser session)
+      4. Only tries up to 2 financial years
 
     When financial_year is set explicitly, only that year is tried.
 
@@ -287,55 +216,98 @@ def main(financial_year=None):
         if shutdown_requested:
             return 130
 
-        # =====================================================================
-        # AUTO MODE (None): Try latest FY, cascade to next if no cash data
-        # EXPLICIT MODE: Try only the specified FY
-        # =====================================================================
         auto_mode = financial_year is None and config.TARGET_FINANCIAL_YEAR is None
 
-        # First attempt (latest FY or explicit FY)
-        ok, scraper_result, parser_result, generator_result, has_data = \
-            run_pipeline_for_year(financial_year)
+        # =====================================================================
+        # STAGE 1: WEB SCRAPING
+        # =====================================================================
+        log_step(logger, 1, 3, "Web Scraping - Downloading Excel file")
 
-        if not ok and not has_data:
-            # Scraping or parsing failed entirely
-            if scraper_result and not scraper_result.get('success'):
-                logger.error("Pipeline failed at scraping stage")
-            elif parser_result and not parser_result.get('success'):
+        scraper = UKDMOScraper()
+
+        try:
+            available_years = scraper.open_browser()
+
+            # Determine which years to try
+            if auto_mode:
+                # Auto mode: try latest first, cascade to next if no data
+                years_to_try = available_years[:2]
+                logger.info(f"Auto mode: will try up to {len(years_to_try)} financial years")
+            else:
+                # Explicit mode: only the specified year
+                years_to_try = [financial_year or config.TARGET_FINANCIAL_YEAR]
+
+            # Try each financial year until we find one with cash data
+            scraper_result = None
+            parser_result = None
+            selected_year = None
+
+            for i, fy in enumerate(years_to_try):
+                if shutdown_requested:
+                    return 130
+
+                if i > 0:
+                    logger.info(f"No cash data in {selected_year}, trying next: {fy}")
+
+                # Download for this FY
+                scraper_result = scraper.download_for_year(fy)
+
+                if not scraper_result['success']:
+                    log_error(logger, f"Scraping failed for {fy}: {scraper_result['error']}")
+                    continue
+
+                selected_year = scraper_result['financial_year']
+                log_success(logger, f"Excel file downloaded: {selected_year}")
+                logger.info(f"File: {scraper_result['file_path']}")
+
+                # Parse immediately to check for cash data
+                log_step(logger, 2, 3, f"Data Parsing - Checking {selected_year}")
+                parser_result = run_parser(scraper_result['file_path'])
+
+                if not parser_result['success']:
+                    log_error(logger, f"Parsing failed for {selected_year}")
+                    continue
+
+                # Check for cash data
+                if has_cash_data(parser_result['data']):
+                    logger.info(f"[OK] Cash data found for {selected_year}")
+                    break
+                else:
+                    logger.warning(f"No cash data in {selected_year} (future dates only)")
+                    parser_result = None  # Reset so we know to continue
+
+            # Done trying — close browser
+        finally:
+            scraper.close_driver()
+
+        # Check if we found data
+        if not scraper_result or not scraper_result['success']:
+            logger.error("Pipeline failed at scraping stage")
+            return 1
+
+        if not parser_result or not parser_result['success']:
+            if auto_mode:
+                logger.error(f"No cash data found in any of: {', '.join(years_to_try)}")
+            else:
                 logger.error("Pipeline failed at parsing stage")
             return 1
 
-        # If auto mode and no cash data, try the next financial year
-        if auto_mode and not has_data:
-            available_years = scraper_result.get('available_years', [])
-            selected_year = scraper_result.get('financial_year')
+        if shutdown_requested:
+            return 130
 
-            if selected_year in available_years:
-                selected_idx = available_years.index(selected_year)
-            else:
-                selected_idx = 0
+        # =====================================================================
+        # STAGE 3: FILE GENERATION
+        # =====================================================================
+        log_step(logger, 3, 3, "File Generation - Creating DATA and META Excel files")
+        generator_result = run_generator(parser_result['data'])
 
-            if selected_idx + 1 < len(available_years):
-                next_year = available_years[selected_idx + 1]
-                logger.info(f"No cash data in {selected_year}, trying next financial year: {next_year}")
-
-                ok, scraper_result, parser_result, generator_result, has_data = \
-                    run_pipeline_for_year(next_year)
-
-                if not ok or not has_data:
-                    logger.error(f"No cash data found in {selected_year} or {next_year}")
-                    return 1
-            else:
-                logger.error(f"No cash data in {selected_year} and no earlier year available")
-                return 1
-
-        if not has_data:
-            logger.error("Pipeline failed: no cash data found")
+        if not generator_result['success']:
+            logger.error("Pipeline failed at file generation stage")
             return 1
 
-        # =============================================================================
+        # =====================================================================
         # PIPELINE COMPLETE
-        # =============================================================================
+        # =====================================================================
         end_time = datetime.now()
         duration = (end_time - start_time).total_seconds()
 

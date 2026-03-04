@@ -50,10 +50,10 @@ PART1_REPORT_CODE = "D5D"
 
 # Financial Year Selection
 # Options:
-#   - None: Select the latest/first financial year (default)
+#   - None: Auto-detect current financial year (e.g. "2025-26" if today is in Apr 2025 - Mar 2026)
 #   - "2025-26": Select specific financial year
 #   - "2024-25", "2023-24", etc.
-TARGET_FINANCIAL_YEAR = None  # Set to None for latest, or e.g. "2024-25" for specific year
+TARGET_FINANCIAL_YEAR = None  # Set to None for auto-detect, or e.g. "2024-25" for specific year
 
 # Column names in downloaded Excel file
 EXCEL_DATE_COLUMN = "Operation Date"
@@ -123,9 +123,8 @@ METADATA_PART1 = {
 COOKIE_CONSENT_BUTTON_ID = "ccc-recommended-settings"
 COOKIE_CLOSE_BUTTON_ID = "ccc-close"
 
-# Form Selectors
+# Form Selectors (use name attribute - stable across sessions, unlike the dynamic GUID-based IDs)
 FINANCIAL_YEAR_SELECT_NAME = "Financial Year"
-FINANCIAL_YEAR_SELECT_ID = "ParameterInputStart[1.73ca57a8-cbfc-4a31-afff-ee2428160f47]"
 
 # Export Button Selector (JavaScript-triggered button)
 EXCEL_BUTTON_SELECTOR = "button.btn.btn-secondary[onclick*='GenerateDownloadDataReport']"

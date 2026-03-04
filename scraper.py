@@ -14,7 +14,6 @@ Based on CHEF_NOVARTIS architecture
 import time
 import os
 import glob
-from datetime import datetime
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -150,34 +149,17 @@ class UKDMOScraper:
             logger.warning(f"Could not handle cookie consent: {str(e)}")
             return True  # Not critical - continue anyway
 
-    @staticmethod
-    def get_current_financial_year():
-        """
-        Determine the current UK financial year (April to March).
-        e.g. if today is 2026-03-04, we are in FY 2025-26.
-             if today is 2026-04-10, we are in FY 2026-27.
-
-        Returns:
-            str: Financial year string (e.g., "2025-26")
-        """
-        today = datetime.now()
-        if today.month >= 4:
-            start_year = today.year
-        else:
-            start_year = today.year - 1
-        end_year_short = str(start_year + 1)[-2:]
-        return f"{start_year}-{end_year_short}"
-
     def select_financial_year(self, year=None):
         """
         Select financial year from dropdown
 
         Args:
             year: Financial year string (e.g., "2025-26")
-                  If None, auto-detects the current financial year
+                  If None, selects the latest (first option in dropdown)
 
         Returns:
-            str: Selected financial year
+            tuple: (selected_year, available_years) where available_years is the
+                   full list of FY values from the dropdown (latest first)
         """
         logger.info("Selecting financial year...")
 
@@ -190,27 +172,31 @@ class UKDMOScraper:
             # Create Select object
             select = Select(select_element)
 
+            # Get all available financial years (dropdown is latest-first)
+            available_years = [opt.get_attribute("value") for opt in select.options]
+            logger.info(f"Available financial years: {available_years[:5]}...")
+
             # Determine which year to select
             target_year = year if year else config.TARGET_FINANCIAL_YEAR
 
             if not target_year:
-                # Auto-detect current financial year
-                target_year = self.get_current_financial_year()
-                logger.info(f"Auto-detected current financial year: {target_year}")
-
-            # Verify the target year exists in the dropdown options
-            available_values = [opt.get_attribute("value") for opt in select.options]
-            if target_year not in available_values:
-                logger.warning(f"Financial year '{target_year}' not found in dropdown. Available: {available_values[:5]}...")
-                # Fall back to first option
+                # Select the latest (first option)
                 select.select_by_index(0)
                 selected_year = select.first_selected_option.get_attribute("value")
-                logger.info(f"[OK] Fell back to first available year: {selected_year}")
-                return selected_year
+                logger.info(f"[OK] Selected latest financial year: {selected_year}")
+                return selected_year, available_years
+
+            # Verify the target year exists in the dropdown
+            if target_year not in available_years:
+                logger.warning(f"Financial year '{target_year}' not found in dropdown. Available: {available_years[:5]}...")
+                select.select_by_index(0)
+                selected_year = select.first_selected_option.get_attribute("value")
+                logger.info(f"[OK] Fell back to latest year: {selected_year}")
+                return selected_year, available_years
 
             select.select_by_value(target_year)
             logger.info(f"[OK] Selected financial year: {target_year}")
-            return target_year
+            return target_year, available_years
 
         except Exception as e:
             logger.error(f"Failed to select financial year: {str(e)}")
@@ -338,6 +324,7 @@ class UKDMOScraper:
             "success": False,
             "file_path": None,
             "financial_year": None,
+            "available_years": [],
             "error": None
         }
 
@@ -354,8 +341,9 @@ class UKDMOScraper:
             self.handle_cookie_consent()
 
             # Step 4: Select financial year
-            selected_year = self.select_financial_year(financial_year)
+            selected_year, available_years = self.select_financial_year(financial_year)
             result["financial_year"] = selected_year
+            result["available_years"] = available_years
 
             # Step 5: Click Excel download
             if not self.click_excel_download():

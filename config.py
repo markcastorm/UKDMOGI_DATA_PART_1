@@ -172,7 +172,7 @@ BLANK_VALUE_REPLACEMENT = ""  # Keep as blank in CSV
 # =============================================================================
 
 # Selenium/Browser settings
-HEADLESS_MODE = False  # Set to True for unattended operation
+HEADLESS_MODE = True  # Set to True for unattended operation
 BROWSER_DOWNLOAD_DIR = DOWNLOADS_DIR  # Where browser downloads files
 
 # Chrome options
